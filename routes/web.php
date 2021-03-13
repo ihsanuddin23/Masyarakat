@@ -25,4 +25,8 @@ Route::middleware('role:admin')->get('/dashboard', function(){
     return view('admin.dashboard');
 })->name('dashboard');
 
-Route::resource('/officer', 'OfficerController');
+// Route::resource(['' => '']);
+Route::resources([
+	'officer' => 'OfficerController',
+	'management-users' => 'ManagementUsers',
+]);

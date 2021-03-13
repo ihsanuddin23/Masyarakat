@@ -71,6 +71,12 @@
                     </div>
                 </div>
             </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{{ route('management-users.index') }}">
+                    <i class="fas fa-fw fa-users"></i>
+                    <span>Management Users</span>
+                </a>
+            </li>
 
             <!-- Nav Item - Utilities Collapse Menu -->
             <li class="nav-item">
@@ -311,71 +317,8 @@
 
                 </nav>
                 <!-- End of Topbar -->
-
-                <!-- Begin Page Content -->
-                <div class="container-fluid">
-
-                    <!-- Content Row -->
-                    <div class="row">
-                        <div class="col-12">
-                            <div class="py-2">
-                                <h2>Tabel Masyarakat</h2>
-                            </div>
-                            <div class="">
-                                <a href="{{ route('officer.create') }}" class="btn btn-primary float-right mb-2">Tambah Pengaduan</a>
-                            </div>
-                            @if(session('pesan'))
-                            <div class="alert alert-success mt-5">
-                                {{session('pesan')}}
-                            </div>
-                            @endif
-                            
-                            <table class="table table-stripped">
-                                <thead>
-                                    <tr>
-                                        <td>No</td>
-                                        <td>Id Petugas</td>
-                                        <td>Nama </td>
-                                        <td>Email</td>
-                                        <td>Password</td>
-                                        <td>Telp</td>
-                                        <td>Alamat</td>
-                                        <td>action</td>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    @forelse ($officers as $ptg)
-                                        <tr>
-                                            <th>{{$loop->iteration }}</th>
-                                            <td>{{$ptg->id}}</td>
-                                            <td>{{$ptg->nama_petugas}}</td>
-                                            <td>{{$ptg->email}}</td>
-                                            <td>{{$ptg->password}}</td>
-                                            <td>{{$ptg->telp}}</td>
-                                            <td>{{$ptg->alamat}}</td>
-                                            <td>
-                                                
-                                                <form action="{{ route('officer.destroy',['officer'=>$ptg->id]) }}" method="POST">
-                                                    @method('DELETE')
-                                                    @csrf
-                                                    <a href="{{ url('officer/'.$ptg->id.'/edit') }}" class="btn btn-primary btn-default">Edit</a>
-                                                    <button type="submit" class="btn btn-danger btn-default" onclick="return confirm('apakah anda ingin menghapus {{$ptg->nama}} ?')">Delete</button>
-                                                    </form>
-                                            </td>
-                                        </tr>
-                                        @empty
-                                            <td colspan="7" class="text-center">TIDAK ADA DATA...</td>
-                                        @endforelse
-                                </tbody>
-                            </table>
-                        </div>
-
-                    </div>
-
-                    
-
-                </div>
-                <!-- /.container-fluid -->
+                <!-- Content -->
+                @yield('content')
 
             </div>
             <!-- End of Main Content -->
