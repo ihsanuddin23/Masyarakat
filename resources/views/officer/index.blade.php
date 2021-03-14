@@ -319,10 +319,10 @@
                     <div class="row">
                         <div class="col-12">
                             <div class="py-2">
-                                <h2>Tabel Masyarakat</h2>
+                                <h2>Tabel Petugas</h2>
                             </div>
                             <div class="">
-                                <a href="{{ route('officer.create') }}" class="btn btn-primary float-right mb-2">Tambah Pengaduan</a>
+                                <a href="{{ route('officer.create') }}" class="btn btn-primary float-right mb-2">Tambah Petugas</a>
                             </div>
                             @if(session('pesan'))
                             <div class="alert alert-success mt-5">

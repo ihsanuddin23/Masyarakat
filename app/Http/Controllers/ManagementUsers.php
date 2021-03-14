@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\{Officer, Users};
+use App\User;
 use DB;
 
 class ManagementUsers extends Controller
@@ -30,7 +31,7 @@ class ManagementUsers extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.create');
     }
 
     /**
@@ -41,7 +42,9 @@ class ManagementUsers extends Controller
      */
     public function store(Request $request)
     {
-        //
+        
+        User::create($request->all());
+        return redirect()->route('management-users.index')->with('pesan',  "Data berhasil $request->nama_petugas ditambah..."); 
     }
 
     /**

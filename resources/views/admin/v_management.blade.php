@@ -14,8 +14,9 @@
 								 <div class="row">
 								 	<div class="col-lg-12">
 								 		<div class="float-right">
-								 			<!-- Button trigger modal -->
-											<button class="btn btn-primary" type="button" data-toggle="modal" data-target="#modalPetugas">Launch Tambah</button>
+											<div class="">
+												<a href="{{ route('management-users.create') }}" class="btn btn-primary float-right mb-2">Tambah Petugas</a>
+											</div>
 								 		</div>
 								 	</div>
 								 </div>
@@ -57,11 +58,11 @@
 						</div>
 					</div>
 				</div>
-				<div class="row">
+{{-- 				<div class="row">
 					<div class="col-12">
 						<div class="card">
 							<div class="card-header">
-								 <h3>Masyarakat</h3>
+								 <h3>Petugas</h3>
 								 <div class="row">
 								 	<div class="col-lg-12">
 								 		<div class="float-right">
@@ -113,7 +114,7 @@
 							</div>
 						</div>
 					</div>
-				</div>
+				</div> --}}
 			</div>
 		</div>
 	</div>

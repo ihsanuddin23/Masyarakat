@@ -61,22 +61,32 @@
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
                     aria-expanded="true" aria-controls="collapseTwo">
                     <i class="fas fa-fw fa-cog"></i>
-                    <span>Petugas</span>
+                    <span>Menu Utama</span>
                 </a>
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Petugas</h6>
-                        <a class="collapse-item" href="">Petugas</a>
+                        <h6 class="collapse-header">Menu Utama</h6>
+                        <a class="collapse-item" href="{{ route('dashboard') }}">Menu Utama</a>
 
                     </div>
                 </div>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="{{ route('management-users.index') }}">
-                    <i class="fas fa-fw fa-users"></i>
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
+                    aria-expanded="true" aria-controls="collapseTwo">
+                    <i class="fas fa-fw fa-cog"></i>
                     <span>Management Users</span>
                 </a>
+                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Management Users</h6>
+                        <a class="collapse-item" href="{{ route('management-users.index') }}">Management Users</a>
+
+                    </div>
+                </div>
             </li>
+
+
 
             <!-- Nav Item - Utilities Collapse Menu -->
             <li class="nav-item">
